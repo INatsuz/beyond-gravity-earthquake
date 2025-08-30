@@ -27,6 +27,7 @@ The choice was mostly to implement breakpoints, responsive behaviour and some co
 - To simplify navigating through the page on mobile a couple of icons were added to the navbar. The map icon scroll down to the map and the up arrow scroll back to the top of the page.
 - When pressing a list item on mobile the page scroll down to the map component to give proper feedback on mobile devices.
 - For optimization memoization of list items was implemented.
+- Added keyboard navigation and simulated clicking when using enter on a focused element using tabIndex. Navigation was added for the buttons in the navigation bar and the list items.
 
 ## Screenshots
 ### PC
