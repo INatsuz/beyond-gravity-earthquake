@@ -36,7 +36,7 @@ export default function EarthquakeList(props: EarthquakeListProps) {
 			{
 				props.earthquakes &&
 				props.earthquakes.length < 200 &&
-				<div className="py-2 bg-light border-bottom text-center" role="button" onClick={() => props.loadMore()}>Click to Load More</div>
+				<div className="py-2 bg-light border-bottom border-top text-center" role="button" onClick={() => props.loadMore()}>Click to Load More</div>
 			}
 		</div>
 	);
