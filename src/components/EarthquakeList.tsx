@@ -1,6 +1,7 @@
 import type {Feature} from "../types/Feature.ts";
 import EarthquakeListItem from "./EarthquakeListItem.tsx";
 import {List} from "react-window";
+import {onEnterPress} from "../utils/CommonEventHandlers.ts";
 
 type EarthquakeListProps = {
 	earthquakes: Feature[] | undefined;
@@ -36,7 +37,7 @@ export default function EarthquakeList(props: EarthquakeListProps) {
 			{
 				props.earthquakes &&
 				props.earthquakes.length < 200 &&
-				<div className="py-2 bg-light border-bottom border-top text-center" role="button" onClick={() => props.loadMore()}>Click to Load More</div>
+				<div className="py-2 bg-light border-bottom border-top text-center" role="button" tabIndex={0} onClick={() => props.loadMore()} onKeyDown={onEnterPress}>Click to Load More</div>
 			}
 		</div>
 	);
