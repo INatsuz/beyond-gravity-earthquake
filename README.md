@@ -32,16 +32,14 @@ The choice was mostly to implement breakpoints, responsive behaviour and some co
 ## Screenshots
 ### PC
 No item selected.<br>
-<img width="1920" height="921" alt="image" src="https://github.com/user-attachments/assets/bd3f02f5-fe72-43bc-aec5-eb4a3967c616" />
+<img width="1920" height="916" alt="image" src="https://github.com/user-attachments/assets/95f25670-0b66-423c-aed7-df788b669813" />
 
-Item selected and marker highlighted<br>
-<img width="1920" height="921" alt="image" src="https://github.com/user-attachments/assets/043ac68a-1b7c-4126-8452-999013023948" />
+Item selected and marker highlighted.<br>
+<img width="1920" height="919" alt="image" src="https://github.com/user-attachments/assets/f9b4823b-9c67-4383-adf0-29617e969a0a" />
 
 ### Mobile
-List on mobile<br>
-<img width="366" height="766" alt="image" src="https://github.com/user-attachments/assets/8864555a-a5f7-4bec-8554-b961ed523fb2" />
+List on mobile.<br>
+<img width="368" height="775" alt="image" src="https://github.com/user-attachments/assets/3151e33a-1b10-4b77-b9b3-208da26b06a5" />
 
 Map with selected item and highlighted marker.<br>
-<img width="363" height="769" alt="image" src="https://github.com/user-attachments/assets/4dec4705-eb05-49f1-a278-757c1b93b903" />
-
-
+<img width="366" height="769" alt="image" src="https://github.com/user-attachments/assets/a493ccb5-b16b-41c5-be48-5c23f43801f7" />
