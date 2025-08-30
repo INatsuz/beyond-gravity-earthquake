@@ -27,3 +27,20 @@ The choice was mostly to implement breakpoints, responsive behaviour and some co
 - To simplify navigating through the page on mobile a couple of icons were added to the navbar. The map icon scroll down to the map and the up arrow scroll back to the top of the page.
 - When pressing a list item on mobile the page scroll down to the map component to give proper feedback on mobile devices.
 - For optimization memoization of list items was implemented.
+
+## Screenshots
+### PC
+No item selected.<br>
+<img width="1920" height="921" alt="image" src="https://github.com/user-attachments/assets/bd3f02f5-fe72-43bc-aec5-eb4a3967c616" />
+
+Item selected and marker highlighted<br>
+<img width="1920" height="921" alt="image" src="https://github.com/user-attachments/assets/043ac68a-1b7c-4126-8452-999013023948" />
+
+### Mobile
+List on mobile<br>
+<img width="366" height="766" alt="image" src="https://github.com/user-attachments/assets/8864555a-a5f7-4bec-8554-b961ed523fb2" />
+
+Map with selected item and highlighted marker.<br>
+<img width="363" height="769" alt="image" src="https://github.com/user-attachments/assets/4dec4705-eb05-49f1-a278-757c1b93b903" />
+
+
