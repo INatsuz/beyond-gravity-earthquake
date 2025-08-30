@@ -12,7 +12,7 @@ export default function MapMarker(props: MapMarkerProps) {
 
 	useEffect(() => {
 		if (props.map.current) {
-			markerRef.current = new Marker({color: props.isActive ? "red" : undefined}).setLngLat([props.coordinates[0], props.coordinates[1]]).addTo(props.map.current);
+			markerRef.current = new Marker({color: props.isActive ? "red" : undefined, className: props.isActive ? "selected-marker" : undefined}).setLngLat([props.coordinates[0], props.coordinates[1]]).addTo(props.map.current);
 		}
 
 		return () => {

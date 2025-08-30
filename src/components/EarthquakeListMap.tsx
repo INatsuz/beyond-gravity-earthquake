@@ -38,18 +38,27 @@ export default function EarthquakeListMap() {
 		};
 	}, []);
 
-	// Fetch the earthquakes for the last day
+	// Fetch the earthquakes from USGS API
 	const fetchEarthquakes = useCallback(async () => {
 		try {
+			// Fetch the earthquakes with the default interval of the last 30 days with an initial limit of 20
+			// The limit is increase when pressing the Load More button
 			const data = await fetch(`https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&limit=${limit.current}`)
 				.then(d => d.json());
 
 			setEarthquakeData(data);
-			console.log(data);
+
+			// Center the map on the first earthquake unless an item is already selected
+			if (activeEarthquake !== "") return;
+			const firstEarthquake: Feature = data.features[0];
+
+			mapRef.current?.flyTo({
+				center: [firstEarthquake.geometry.coordinates[0], firstEarthquake.geometry.coordinates[1]]
+			});
 		} catch (error) {
 			console.error(error);
 		}
-	}, []);
+	}, [activeEarthquake]);
 
 	function onListClick(earthquake: Feature) {
 		setActiveEarthquake(earthquake.id);
@@ -59,14 +68,13 @@ export default function EarthquakeListMap() {
 
 	function loadMore() {
 		limit.current += 20;
-		console.log(limit.current);
 		fetchEarthquakes();
 	}
 
 	return (
 		<div className="map-list-wrapper row g-0">
 			<div className="col h-100">
-				<EarthquakeList earthquakes={earthquakeData?.features} onClick={onListClick} loadMore={loadMore} activeEarthquake={activeEarthquake} />
+				<EarthquakeList earthquakes={earthquakeData?.features} onClick={onListClick} loadMore={loadMore} activeEarthquake={activeEarthquake}/>
 			</div>
 			<div className="col-12 col-xl-9 h-100">
 				<div id="map-container" ref={mapContainerRef as Ref<HTMLDivElement>}/>

@@ -11,9 +11,8 @@ type EarthquakeListProps = {
 export default function EarthquakeList(props: EarthquakeListProps) {
 	return (
 		<>
-
 			<ul className="earthquake-list h-100 p-0 overflow-y-scroll">
-				<li>
+				<li className="p-0">
 					<div className="border-bottom py-4 bg-light">
 						<h5 className="text-center">Recent Earthquakes</h5>
 						<p className="text-center m-0">Showing {props.earthquakes?.length}</p>
