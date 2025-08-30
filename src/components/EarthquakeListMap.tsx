@@ -73,10 +73,10 @@ export default function EarthquakeListMap() {
 
 	return (
 		<div className="map-list-wrapper row g-0">
-			<div className="col h-100">
+			<div className="col col-lg-5 col-xl-3 h-100">
 				<EarthquakeList earthquakes={earthquakeData?.features} onClick={onListClick} loadMore={loadMore} activeEarthquake={activeEarthquake}/>
 			</div>
-			<div className="col-12 col-xl-9 h-100">
+			<div className="col-12 col-lg-7 col-xl-9 h-100">
 				<div id="map-container" ref={mapContainerRef as Ref<HTMLDivElement>}/>
 				{
 					earthquakeData?.features.map((item) => (

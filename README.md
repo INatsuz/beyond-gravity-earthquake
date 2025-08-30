@@ -17,6 +17,7 @@ Run ```npm run dev``` to open the development server. The address to open should
 - For ease of setup, the Mapbox Token is hardcoded and visible in the repository.
 - The data is being fetched from a realtime API provided by USGS.
 - A max limit of 200 items was defined for fetching earthquakes.
+- For large dataset optimization a virtualized list was implemented using the react-window library.
 - To aid with some design consistency Bootstrap was used. 
 The choice was mostly to implement breakpoints, responsive behaviour and some components like the navigation bar.
 - While some custom CSS was used for some elements, styling was mainly implemented through Bootstrap classes.

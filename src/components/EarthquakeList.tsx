@@ -1,5 +1,6 @@
 import type {Feature} from "../types/Feature.ts";
 import EarthquakeListItem from "./EarthquakeListItem.tsx";
+import {List} from "react-window";
 
 type EarthquakeListProps = {
 	earthquakes: Feature[] | undefined;
@@ -10,24 +11,33 @@ type EarthquakeListProps = {
 
 export default function EarthquakeList(props: EarthquakeListProps) {
 	return (
-		<>
-			<ul className="earthquake-list h-100 p-0 overflow-y-scroll">
-				<li className="p-0">
-					<div className="border-bottom py-4 bg-light">
-						<h5 className="text-center">Recent Earthquakes</h5>
-						<p className="text-center m-0">Showing {props.earthquakes?.length}</p>
-					</div>
-				</li>
-				{
-					props.earthquakes && props.earthquakes.map((item) => (<EarthquakeListItem item={item} onClick={props.onClick} isActive={item.id === props.activeEarthquake}/>))
-				}
-
+		<div className="h-100 overflow-y-hidden d-flex flex-column">
+			<div className="border-bottom py-4 bg-light">
+				<h5 className="text-center">Recent Earthquakes</h5>
+				<p className="text-center m-0">Showing {props.earthquakes?.length}</p>
+			</div>
+			<div className="flex-fill overflow-y-hidden">
 				{
 					props.earthquakes &&
-					props.earthquakes.length < 200 &&
-					<li className="border-bottom text-center" role="button" onClick={() => props.loadMore()}>Click to Load More</li>
+					<List
+						rowHeight={98}
+						rowComponent={EarthquakeListItem}
+						rowProps={
+							{
+								items: props.earthquakes,
+								onClick: props.onClick,
+								activeEarthquake: props.activeEarthquake
+							}
+						}
+						rowCount={props.earthquakes?.length}
+					/>
 				}
-			</ul>
-		</>
+			</div>
+			{
+				props.earthquakes &&
+				props.earthquakes.length < 200 &&
+				<div className="py-2 bg-light border-bottom text-center" role="button" onClick={() => props.loadMore()}>Click to Load More</div>
+			}
+		</div>
 	);
 }

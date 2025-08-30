@@ -14,13 +14,14 @@
     right: 0;
 }
 
-.earthquake-list li {
-    list-style: none;
+.earthquake-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.25rem;
-    padding: 10px;
 }
 
-.earthquake-list li.active {
+.earthquake-list-item.active {
     background-color: lightgray;
 }
 
