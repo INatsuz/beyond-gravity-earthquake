@@ -67,7 +67,7 @@ export default function EarthquakeListMap() {
 	}
 
 	function loadMore() {
-		limit.current += 20;
+		limit.current = Math.min(limit.current + 20, 200);
 		fetchEarthquakes();
 	}
 
