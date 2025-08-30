@@ -32,7 +32,7 @@ The choice was mostly to implement breakpoints, responsive behaviour and some co
 ## Screenshots
 ### PC
 No item selected.<br>
-<img width="1920" height="916" alt="image" src="https://github.com/user-attachments/assets/95f25670-0b66-423c-aed7-df788b669813" />
+<img width="1920" height="921" alt="image" src="https://github.com/user-attachments/assets/77d8b095-8654-481f-9eb2-177f5793de34" />
 
 Item selected and marker highlighted.<br>
 <img width="1920" height="919" alt="image" src="https://github.com/user-attachments/assets/f9b4823b-9c67-4383-adf0-29617e969a0a" />
