@@ -2,12 +2,19 @@
 
 
 ## Setup Instructions
+### Requirements
+- Node
+- NPM
+
+### Steps
 Clone the repository to your local machine.<br>
 Run ```npm install``` in the project directory to install the necessary dependencies.<br>
 Run ```npm run dev``` to open the development server. The address to open should appear in the console output.
 
 ## Design Choices
+- The chosen framework was React
 - The chosen map library was Mapbox.
+- For ease of setup, the Mapbox Token is hardcoded and visible in the repository.
 - The data is being fetched from a realtime API provided by USGS.
 - A max limit of 200 items was defined for fetching earthquakes.
 - To aid with some design consistency Bootstrap was used. 
@@ -19,3 +26,4 @@ The choice was mostly to implement breakpoints, responsive behaviour and some co
 - While not specified a different background color was also added to a selected list item.
 - To simplify navigating through the page on mobile a couple of icons were added to the navbar. The map icon scroll down to the map and the up arrow scroll back to the top of the page.
 - When pressing a list item on mobile the page scroll down to the map component to give proper feedback on mobile devices.
+- For optimization memoization of list items was implemented.
